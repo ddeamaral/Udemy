@@ -40,3 +40,30 @@ file.write('Line 1')
 
 # note, this will create a new file, write the text to it, and overwrite what
 # ever was in the file, and in the file system.
+
+
+
+file = open('example.txt', 'a') # appendable file
+
+
+# Use with, to avoid having to explicitly call the close method
+
+with open('example.txt', 'a+') as file:
+    file.seek(0)
+    print( file.read() )
+
+
+
+# r opens a file for reading only. The file pointer is placed at the beginning
+# of the file. This is the default mode.
+
+# r+ Opens a file for both reading and writing. Pointer at beginning of file
+
+#w open a file for write only. Overwrites if exists, creates if not.
+
+# w+ open a file for both writing and reading
+
+# a opens for appending to end of a file. pointer is at the end. if not exists
+# creates
+
+# a+ appending and reading. pointer at end of file, and creates if not exists
